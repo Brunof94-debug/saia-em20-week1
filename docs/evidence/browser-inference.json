@@ -1,0 +1,173 @@
+{
+  "testedAt": "2026-10-07",
+  "environment": "Codex in-app Chromium browser; localhost; WASM; device-specific timings",
+  "cases": [
+    {
+      "name": "Portuguese colors",
+      "evidence": {
+        "selection": "B",
+        "source": "local-ai",
+        "createdAt": "2026-10-07T05:28:00.965Z",
+        "model": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "dtype": "q8",
+        "device": "wasm",
+        "method": "multilingual semantic retrieval",
+        "pooling": "mean",
+        "normalized": true,
+        "ranking": [
+          {
+            "id": "B",
+            "score": 0.870097
+          },
+          {
+            "id": "D",
+            "score": 0.816512
+          },
+          {
+            "id": "C",
+            "score": 0.816076
+          },
+          {
+            "id": "A",
+            "score": 0.814419
+          }
+        ],
+        "inferenceMs": 189,
+        "totalMs": 12653
+      }
+    },
+    {
+      "name": "Portuguese bird and leaf sounds",
+      "evidence": {
+        "selection": "A",
+        "source": "local-ai",
+        "createdAt": "2026-10-07T05:28:30.648Z",
+        "model": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "dtype": "q8",
+        "device": "wasm",
+        "method": "multilingual semantic retrieval",
+        "pooling": "mean",
+        "normalized": true,
+        "ranking": [
+          {
+            "id": "A",
+            "score": 0.833605
+          },
+          {
+            "id": "B",
+            "score": 0.815098
+          },
+          {
+            "id": "D",
+            "score": 0.811642
+          },
+          {
+            "id": "C",
+            "score": 0.795189
+          }
+        ],
+        "inferenceMs": 20,
+        "totalMs": 20
+      }
+    },
+    {
+      "name": "English bark and stone textures",
+      "evidence": {
+        "selection": "D",
+        "source": "local-ai",
+        "createdAt": "2026-10-07T05:28:41.349Z",
+        "model": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "dtype": "q8",
+        "device": "wasm",
+        "method": "multilingual semantic retrieval",
+        "pooling": "mean",
+        "normalized": true,
+        "ranking": [
+          {
+            "id": "D",
+            "score": 0.877189
+          },
+          {
+            "id": "A",
+            "score": 0.829842
+          },
+          {
+            "id": "B",
+            "score": 0.82518
+          },
+          {
+            "id": "C",
+            "score": 0.793961
+          }
+        ],
+        "inferenceMs": 20,
+        "totalMs": 20
+      }
+    },
+    {
+      "name": "English gentle walk",
+      "evidence": {
+        "selection": "E",
+        "source": "local-ai",
+        "createdAt": "2026-10-07T05:29:01.877Z",
+        "model": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "dtype": "q8",
+        "device": "wasm",
+        "method": "multilingual semantic retrieval",
+        "pooling": "mean",
+        "normalized": true,
+        "ranking": [
+          {
+            "id": "E",
+            "score": 0.886595
+          },
+          {
+            "id": "F",
+            "score": 0.877762
+          }
+        ],
+        "inferenceMs": 72,
+        "totalMs": 72
+      }
+    },
+    {
+      "name": "Conflicting request cannot override seated preference",
+      "evidence": {
+        "selection": "A",
+        "source": "local-ai",
+        "createdAt": "2026-10-07T05:29:46.732Z",
+        "model": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "dtype": "q8",
+        "device": "wasm",
+        "method": "multilingual semantic retrieval",
+        "pooling": "mean",
+        "normalized": true,
+        "ranking": [
+          {
+            "id": "A",
+            "score": 0.822807
+          },
+          {
+            "id": "C",
+            "score": 0.805802
+          },
+          {
+            "id": "D",
+            "score": 0.797145
+          },
+          {
+            "id": "B",
+            "score": 0.784201
+          }
+        ],
+        "inferenceMs": 19,
+        "totalMs": 19
+      }
+    }
+  ]
+}
