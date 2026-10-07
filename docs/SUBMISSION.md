@@ -1,6 +1,8 @@
 ---
 title: "Outside in 20: open AI that gives your phone a stopping point"
-published: false
+published: true
+published_url: https://dev.to/brunof94_debug/outside-in-20-open-ai-that-gives-your-phone-a-stopping-point-2427
+ai_disclosure: fully_autonomous
 tags: devchallenge, hf26challenge, ai, opensource
 ---
 
@@ -17,6 +19,10 @@ The app asks for no GPS access and does not discover destinations. An optional r
 ## Demo
 
 [Open Outside in 20](https://saia-em20-week1.brunoprof07.chatgpt.site).
+
+![Outside in 20 recommending a seated colour-observation activity using local AI](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/icsrdjsxqw5dj0emqhot.jpg)
+
+*Browser demonstration. Forest photograph: Wolfgang Hasselmann, Unsplash.*
 
 Try a preference about noticing colours, listening to birds, or taking a gentle walk. You can inspect the matching details, save a self-contained HTML pocket card, and start the timer. Reloading restores the selected plan and its original end time.
 
