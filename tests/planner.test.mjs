@@ -49,6 +49,6 @@ test('The pocket card has all instructions, no external resources, and escapes u
   assert.ok(html.includes('&lt;script&gt;alert(1)&lt;/script&gt;'));
   assert.equal((html.match(/<section>/g)??[]).length,3);
   assert.ok(!/<script|src=|href=/i.test(html));
-  assert.ok(html.includes(language==='pt'?'SEM IA':'NO AI'));
+  assert.ok(html.includes(language==='pt'?'DO CATÁLOGO':'FROM THE CATALOG'));
  }
 });
