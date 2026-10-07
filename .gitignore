@@ -1,0 +1,10 @@
+.sites-runtime/
+node_modules/
+dist/ai-worker.js
+dist/vendor/
+.env*
+!.env.example
+*.tar.gz
+*.zip
+.DS_Store
+evidence/raw/
