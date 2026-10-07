@@ -1,0 +1,11 @@
+import {build} from 'esbuild';
+import {mkdir,copyFile,readdir,unlink} from 'node:fs/promises';
+import {resolve} from 'node:path';
+const ortSource=resolve('node_modules/onnxruntime-web/dist');
+const target=resolve('dist/vendor/ort');
+await mkdir(target,{recursive:true});
+const runtimeFiles=['ort-wasm-simd-threaded.mjs','ort-wasm-simd-threaded.wasm'];
+for(const name of await readdir(target))if(!runtimeFiles.includes(name)&&(name.endsWith('.wasm')||name.endsWith('.mjs')))await unlink(resolve(target,name));
+for(const name of runtimeFiles)await copyFile(resolve(ortSource,name),resolve(target,name));
+await build({entryPoints:['src/ai-worker.js'],outfile:'dist/ai-worker.js',bundle:true,platform:'browser',format:'esm',target:'es2022',minify:true,legalComments:'eof',alias:{'onnxruntime-web/webgpu':'onnxruntime-web/wasm'}});
+console.log('Browser AI worker bundled; ONNX runtime assets copied.');
