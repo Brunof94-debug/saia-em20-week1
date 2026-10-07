@@ -4,6 +4,8 @@ A bilingual outdoor-break planner with an open multilingual embedding model runn
 
 ## Use it
 
+Public demo: https://brunof94-debug.github.io/saia-em20-week1/
+
 1. Choose 10, 20, or 30 minutes and a place you already know.
 2. Select a goal, optionally request a seated break, and add a short preference in Portuguese or English.
 3. Prepare with local AI. First use downloads approximately 135 MB of model/tokenizer files, plus runtime assets.
@@ -36,7 +38,7 @@ Open `http://127.0.0.1:4318`. HTTPS or localhost is required for service workers
 - Preference text uses `query: ` and each activity description uses `passage: `. Mean pooling and normalization make the dot product a cosine similarity. Scores are **not confidence percentages**.
 - Passage vectors are reused within the worker. Each new preference still requires actual model inference.
 - The model chooses an activity; authored catalog text supplies instructions. It cannot invent a route or override a hard constraint.
-- The plan exposes the actual model, revision, ranking and measured runtime. If inference fails, an optional catalog suggestion is visibly labeled **NO AI / SEM IA**.
+- Saved plan evidence records the actual model, revision, ranking and measured runtime. The consumer interface displays similarity scores in the suggestion details; full technical evidence is documented in this repository. If inference fails, an optional catalog suggestion is visibly labeled **FROM THE CATALOG / DO CATÁLOGO**; the personalized route is labeled **YOUR PLAN / SEU PLANO**.
 
 Semantic matching is imperfect, particularly for negation and ambiguous preferences. A small catalog is an intentional scope limit; this is not a wildlife identifier or a route safety service.
 
@@ -66,7 +68,7 @@ Real browser inference on October 7, 2026 returned:
 
 The first run took 12.65 seconds overall on the test device. Timings are device-specific, not performance guarantees. Raw evidence is in [docs/evidence/browser-inference.json](docs/evidence/browser-inference.json). Unit tests alone do not prove browser inference or offline loading. No user study or outdoor trial is claimed.
 
-GitHub Actions builds the browser worker and runs checks on push/PR (`.github/workflows/ci.yml`). Browser WebMCP exposes `read_outdoor_plan` and `prepare_outdoor_plan` when supported; preparation uses the same validated flow as the UI and does not start the timer.
+GitHub Actions builds the browser worker, runs checks on push/PR and publishes the verified `dist/` bundle to GitHub Pages (`.github/workflows/ci.yml`). Browser WebMCP exposes `read_outdoor_plan` and `prepare_outdoor_plan` when supported; preparation uses the same validated flow as the UI and does not start the timer.
 
 ## Attribution
 
