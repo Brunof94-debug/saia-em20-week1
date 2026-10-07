@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17452e">
+  <meta name="description" content="Transforme uma pausa em um pequeno plano ao ar livre, com IA aberta no seu dispositivo.">
+  <title>Saia em 20 — uma pausa lá fora</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317452e'/%3E%3Cpath d='M9 24V13l7-5 7 5v11M16 24V14M7 17h18' stroke='%23d6ff6d' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="Saia em 20"><span class="brand-mark">20</span>saia em <b>20</b></a><div class="header-end"><span class="private-note" data-i18n="private">Seu plano fica aqui.</span><button id="language" class="language" aria-label="Switch to English">EN</button></div></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow" data-i18n="eyebrow">UM INTERVALO DE VERDADE</p><h1 data-i18n="headline">Sua próxima pausa<br>acontece lá fora.</h1><p class="intro-copy" data-i18n="intro">Escolha um lugar que você conhece. Prepare um pequeno plano. Depois, guarde a tela.</p></div><div class="photo"><img src="/forest.jpg" alt="Luz do sol entre folhas verdes em um caminho de bosque" width="1400" height="600"><span data-i18n="photoLabel">Um pouco menos de tela.</span></div></section>
+    <div class="workspace">
+      <section class="setup" aria-labelledby="setup-title"><div class="section-title"><span class="step-index">01</span><h2 id="setup-title" data-i18n="setup">Prepare sua pausa</h2></div>
+        <form id="plan-form">
+          <fieldset><legend data-i18n="duration">Quanto tempo você tem?</legend><div class="choices time-choices"><label><input type="radio" name="duration" value="10"><span>10 <small>min</small></span></label><label><input type="radio" name="duration" value="20" checked><span>20 <small>min</small></span></label><label><input type="radio" name="duration" value="30"><span>30 <small>min</small></span></label></div></fieldset>
+          <label class="field-label" for="place" data-i18n="place">Onde você pode ir?</label><input id="place" name="place" type="text" maxlength="80" required value="Meu parque de sempre" autocomplete="off"><p class="field-hint" data-i18n="placeHint">Use um local conhecido. Não buscamos rotas nem enviamos sua localização.</p>
+          <fieldset><legend data-i18n="goal">O que você quer dessa pausa?</legend><div class="choices goal-choices"><label><input type="radio" name="goal" value="quiet" checked><span data-i18n="quiet">Desacelerar</span></label><label><input type="radio" name="goal" value="notice"><span data-i18n="notice">Observar</span></label><label><input type="radio" name="goal" value="move"><span data-i18n="move">Me movimentar</span></label></div></fieldset>
+          <label class="check-row"><input id="seated" name="seated" type="checkbox"><span data-i18n="seated">Prefiro uma pausa sentado ou sem caminhar</span></label>
+          <label class="field-label" for="context" data-i18n="context">Um detalhe para o seu plano <span class="optional">(opcional)</span></label><textarea id="context" name="context" rows="2" maxlength="180" placeholder="Quero observar pássaros, mas sem tirar fotos."></textarea>
+          <button id="generate" class="primary" type="submit"><span data-i18n="generate">Preparar com IA local</span><span class="button-symbol">✦</span></button>
+          <p class="download-note" data-i18n="download">No primeiro uso, o modelo aberto baixa cerca de 135 MB. Depois, pode ser reutilizado do cache.</p>
+        </form>
+        <div id="model-status" class="model-status" role="status" aria-live="polite" hidden></div><progress id="download-progress" max="100" value="0" hidden></progress><button id="cancel" class="text-button" hidden data-i18n="cancel">Cancelar preparação</button>
+        <div id="error" class="error" role="alert" hidden></div>
+      </section>
+      <section class="plan-column" aria-labelledby="plan-title"><div class="section-title"><span class="step-index">02</span><h2 id="plan-title" data-i18n="planHeading">Leve só o plano</h2><span id="plan-state" class="pill" data-i18n="preview">PRÉVIA</span></div><div id="plan"></div><div id="plan-actions" class="plan-actions" hidden><button id="start" class="primary" data-i18n="start">Começar minha pausa</button><a id="download" class="secondary" download="saia-em20-pocket-card.html" data-i18n="save">Salvar cartão</a></div><div id="evidence" class="evidence" hidden></div></section>
+    </div>
+    <section id="reflection" class="reflection" hidden><h2 data-i18n="reflection">Como foi lá fora?</h2><p data-i18n="reflectionHint">Um registro seu, salvo apenas neste dispositivo.</p><div class="choices"><button class="secondary" data-reflect="better" data-i18n="better">Voltei mais leve</button><button class="secondary" data-reflect="same" data-i18n="same">Foi uma pausa</button><button class="secondary" data-reflect="skip" data-i18n="skip">Prefiro não registrar</button></div><p id="reflection-result" role="status"></p></section>
+  </main>
+  <footer><p data-i18n="footer">IA aberta para tornar a tela a parte mais curta da pausa.</p><div><a href="/about.html" data-i18n="about">Como funciona</a><a href="https://unsplash.com/photos/a-lush-green-forest-path-with-sunlight-filtering-through-trees-9LU8RJCh8Hk" target="_blank" rel="noopener" data-i18n="photoCredit">Foto: Wolfgang Hasselmann</a></div></footer>
+  <dialog id="pause-dialog" aria-labelledby="pause-title"><div class="pause-surface"><p class="eyebrow" data-i18n="pauseEyebrow">O RESTO ACONTECE LÁ FORA</p><h2 id="pause-title" data-i18n="pauseTitle">Pode guardar a tela.</h2><p id="pause-place"></p><div id="timer" class="timer" role="timer">20:00</div><p id="pause-instruction"></p><p class="quiet-hint" data-i18n="timerHint">O tempo continua com a tela fechada. Volte quando quiser.</p><div class="pause-buttons"><button id="finish" class="primary" data-i18n="finish">Voltei da pausa</button><button id="close-pause" class="text-button" data-i18n="close">Ver meu plano</button></div></div></dialog>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
