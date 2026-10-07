@@ -1,0 +1,32 @@
+{
+  "selection": "B",
+  "source": "local-ai",
+  "createdAt": "2026-10-07T05:47:12.333Z",
+  "model": "Xenova/multilingual-e5-small",
+  "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+  "dtype": "q8",
+  "device": "wasm",
+  "method": "multilingual semantic retrieval",
+  "pooling": "mean",
+  "normalized": true,
+  "ranking": [
+    {
+      "id": "B",
+      "score": 0.870097
+    },
+    {
+      "id": "D",
+      "score": 0.816512
+    },
+    {
+      "id": "C",
+      "score": 0.816076
+    },
+    {
+      "id": "A",
+      "score": 0.814419
+    }
+  ],
+  "inferenceMs": 144,
+  "totalMs": 2500
+}
