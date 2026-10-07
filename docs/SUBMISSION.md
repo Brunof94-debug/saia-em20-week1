@@ -5,7 +5,6 @@ published_url: https://dev.to/brunof94_debug/outside-in-20-open-ai-that-gives-yo
 ai_disclosure: fully_autonomous
 tags: devchallenge, hf26challenge, ai, opensource
 ---
-
 *Entry for the [Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass](https://dev.to/challenges/hacktoberfest-week1-2026-10-05).*
 
 ## What I Built
@@ -18,9 +17,9 @@ The app asks for no GPS access and does not discover destinations. An optional r
 
 ## Demo
 
-[Open Outside in 20](https://saia-em20-week1.brunoprof07.chatgpt.site).
+[Open Outside in 20](https://brunof94-debug.github.io/saia-em20-week1/).
 
-![Outside in 20 recommending a seated colour-observation activity using local AI](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/icsrdjsxqw5dj0emqhot.jpg)
+![Outside in 20 with its terracotta, sand and deep blue interface](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/ufc5e0jjszgcojdmmjne.jpg)
 
 *Browser demonstration. Forest photograph: Wolfgang Hasselmann, Unsplash.*
 
@@ -32,7 +31,7 @@ The first AI setup needs an internet connection and a substantial download. Prep
 
 [Public repository](https://github.com/Brunof94-debug/saia-em20-week1).
 
-**Ten automated tests pass.** They check meaningful application boundaries, including activity eligibility and safe handling of text. The public [GitHub Actions run](https://github.com/Brunof94-debug/saia-em20-week1/actions/runs/37578773469) completed successfully in **24 seconds**. It installs locked dependencies, runs tests, builds and checks the app, and uploads the browser bundle.
+**Ten automated tests pass.** They check meaningful application boundaries, including activity eligibility and safe handling of text. The public [GitHub Actions run](https://github.com/Brunof94-debug/saia-em20-week1/actions/runs/37581580997) completed successfully. It installs locked dependencies, runs tests, builds and checks the app, uploads the browser bundle, and publishes the verified result to GitHub Pages.
 
 Actual model execution has separate [browser evidence](https://github.com/Brunof94-debug/saia-em20-week1/blob/main/docs/evidence/wasm-only-inference.json).
 
